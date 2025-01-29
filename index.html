@@ -8,8 +8,6 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('u1.jpg') no-repeat center center fixed;
-            background-size: cover;
             color: #ffffff;
             text-align: center;
             display: flex;
@@ -17,6 +15,17 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden; /* Prevents scrolling */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Places video behind content */
         }
 
         h1 {
@@ -85,14 +94,19 @@
     </style>
 </head>
 <body>
+    <video id="background-video" autoplay muted playsinline>
+        <source src="A_trip_to_TRAPPIST-1_and_its_seven_planets.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
     <h1>百万AI</h1>
-    <p>帮助一百万普通中国人学会 AI</p>
+    <p>立志帮助一百万普通中国人学会 AI</p>
     <a href="https://hongtaoh.com/cn/blog" class="btn">了解更多</a>
     <div class="credit">
-        Background image by <a href="https://www.pexels.com/@creationsbyfaik" target="_blank">Faik Akmd</a> from Pexels
+        Video by <a href="https://en.wikipedia.org/wiki/File:A_trip_to_TRAPPIST-1_and_its_seven_planets.webm" target="_blank">Wikipedia Commons</a>
     </div>
     <footer>
-        © 2024 百万AI | <a href="https://baiwan.ai">baiwan.ai</a>
+        © 2024-2025 百万AI | <a href="https://baiwan.ai">baiwan.ai</a>
     </footer>
 </body>
 </html>
